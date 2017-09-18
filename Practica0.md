@@ -5,7 +5,9 @@ ssh-keygen -t rsa -C "carliyostole@gmail.com"
 
 Con esto tenemos nuestra clave pública creada, entonces ingresamos a Github, y en la sección Settings elegimos la opción SSH Keys e ingresamos.
 
+
 Hacemos click en el botón Add SSH Key.
+
 
 En el campo Key pegamos el contenido del archivo id_rsa.pub
 Y luego hacemos click en el bóton Add Key, nos pedirá nuestra contraseña de Github para validar y listo.
