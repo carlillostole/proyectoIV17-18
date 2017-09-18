@@ -14,7 +14,7 @@ Y luego hacemos click en el bóton Add Key, nos pedirá nuestra contraseña de G
 
 
 A continuación clonamos el directorio:
-git clone https://github.com/carlillostole/proyectoIV17_18
+git clone https://github.com/carlillostole/proyectoIV17-18
 
 #**Realizamos las tareas de commit y close#**
 
