@@ -12,6 +12,8 @@ Hacemos click en el botón Add SSH Key.
 En el campo Key pegamos el contenido del archivo id_rsa.pub
 Y luego hacemos click en el bóton Add Key, nos pedirá nuestra contraseña de Github para validar y listo.
 
+![curl](https://github.com/carlillostole/proyectoIV17-18/blob/hito0/capturas/Captura%20de%20pantalla%20de%202017-09-19%2011-49-06.png?raw=true)
+
 
 A continuación clonamos el directorio:
 git clone https://github.com/carlillostole/proyectoIV17-18
