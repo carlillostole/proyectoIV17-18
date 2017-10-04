@@ -1,7 +1,2 @@
-requests==2.11.1
-six==1.10.0
-pyTelegramBotAPI==2.1.7
-wsgiref==0.1.2
-python-mimeparse
-falcon
+pyTelegramBotAPI==3.2
 python-telegram-bot>=2.5
