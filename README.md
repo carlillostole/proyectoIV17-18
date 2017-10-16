@@ -1,5 +1,5 @@
 
-# The WeatherBOT - Proyecto Infraestructura Virtual 2017-2018 - Grado en Ingeniería Informática
+# The WeatherBOT - Proyecto Infraestructura Virtual 2017-2018 -  Grado en Ingeniería Informática
 
 [![Build Status](https://travis-ci.org/carlillostole/proyectoIV17-18.svg?branch=master)](https://travis-ci.org/carlillostole/proyectoIV17-18)
 
@@ -15,7 +15,7 @@ Uso de un bot de Telegram para obtener información meteorológica de una ciudad
 ## Más información
 
 -	El usuario deberá tener Telegram para que se le envíe el pronóstico.
--	El bot estará online todo el tiempo. 
+-	El bot estará online todo el tiempo.
 -	Recopilará la información de forma autónoma.
 
 ## Servicios
