@@ -4,7 +4,7 @@
 import sqlite3
 
 def ciudades(consulta):
-    db = sqlite3.connect('datosciudad.db') # conectamos con la bd
+    db = sqlite3.connect('datosmeteo.db') # conectamos con la bd
     b = db.cursor()
     b.execute(consulta) # Obtenemos el resultado de la consulta
     resp = ""
@@ -26,7 +26,7 @@ def ciudades(consulta):
 def cuentaCiudades():
     """ Función que devuelve el total de actividades disponibles """
     # Conectamos con la base de datos
-    db = sqlite3.connect('datosciudad.db')
+    db = sqlite3.connect('datosmeteo.db')
     b = db.cursor()
     b.execute("SELECT * FROM ciudades") # Obtenemos el resultado de la consulta
     total = 0
@@ -39,7 +39,7 @@ def cuentaCiudades():
     return total
 
 def insertar(ciudad, temperatura, humedad,presion):
-    db = sqlite3.connect('datosciudad.db')
+    db = sqlite3.connect('datosmeteo.db')
     b = db.cursor()
     b.execute("INSERT INTO ciudades (ciudad, temperatura, humedad,presion) VALUES (?, ?, ?,?)", (ciudad, temperatura, humedad,presion))
     db.commit()

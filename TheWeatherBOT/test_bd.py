@@ -22,6 +22,5 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(nombre, "granada\n")
 
 
-
 if __name__ == '__main__':
 	unittest.main()
