@@ -1,6 +1,7 @@
 
 # The WeatherBOT - Proyecto Infraestructura Virtual 2017-2018 - Grado en Ingeniería Informática
 
+[![Build Status](https://travis-ci.org/carlillostole/proyectoIV17-18.svg?branch=master)](https://travis-ci.org/carlillostole/proyectoIV17-18)
 
 ## Objetivo
 
@@ -27,3 +28,13 @@ Uso de un bot de Telegram para obtener información meteorológica de una ciudad
 -	API de Telegram para la realización del bot.
 -	API OpenWeatherMap.
 -	Lenguaje Python.
+
+## Automatización, Make
+
+Se ha creado un archivo Makefile para automatizar la creación del proyecto y realizar algun test de la aplicación.[make](https://github.com/carlillostole/proyectoIV17-18/blob/master/Makefile)
+
+## Integración continua
+
+El sistema de integración continua comprueba de forma continua que cada cambio realizado al repositorio, siga funcionando correctamente.
+
+-	[Travis](https://travis-ci.org/) permite testear el código del proyecto. Para llevar a cabo esto hay que adjuntar en el directorio raíz de nuestro proyecto el fichero **.travis.yml**. Mi archivo [.travis.yml](https://github.com/carlillostole/proyectoIV17-18/blob/master/.travis.yml)
