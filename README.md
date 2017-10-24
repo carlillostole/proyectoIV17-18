@@ -73,4 +73,4 @@ Para crear una aplicación en Heroku se utiliza el siguiente comando:
 
 Una vez realizados todos estos pasos, la aplicación queda desplegada y configurada correctamente:
 
-![1](https://github.com/carlillostole/proyectoIV17-18/blob/master/img/herokudespligue.png?raw=true)
+![1](https://github.com/carlillostole/proyectoIV17-18/blob/master/img/despliegue.png?raw=true)
