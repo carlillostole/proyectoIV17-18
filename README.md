@@ -49,7 +49,7 @@ Para llevar a cabo el despliegue tenemos que crear los siguientes ficheros: **Pr
 -	El fichero [runtime.txt](https://github.com/carlillostole/proyectoIV17-18/blob/master/runtime.txt) indica la versión de python a utilizar.
 -	El archivo [requirements.txt](https://github.com/carlillostole/proyectoIV17-18/blob/master/requirements.txt) sirve para que Heroku conozca las dependencias. Tiene extensión .txt y debe estar en la raíz del repositorio.
 
-Este es el bot ya desplegado: [https://theweatherbot1718.herokuapp.com/](https://telegram.me/carlillostole_weatherBot).
+Este es el bot ya desplegado: [https://theweatherbot1718.herokuapp.com/](https://theweatherbot1718.herokuapp.com/).
 También podemos buscar el nombre en TELEGRAM con el nombre: **@TheWeatherBOT**
 
 ### Configuración realizada
