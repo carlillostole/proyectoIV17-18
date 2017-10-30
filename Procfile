@@ -1,1 +1,1 @@
-worker: cd TheWeatherBOT && python bot.py 
+web: cd TheWeatherBOT && python bot.py 
