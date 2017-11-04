@@ -70,7 +70,61 @@ Para crear una aplicación en Heroku se utiliza el siguiente comando:
  heroku apps:create --region eu NOMBRE_APP
 
 ```
+Por último, lanzamos tanto el bot como el servicio web.
+
+```
+heroku ps:scale worker=1 --app theweatherbot1718
+
+heroku ps:scale web=1 --app theweatherbot1718
+
+```
 
 Una vez realizados todos estos pasos, la aplicación queda desplegada y configurada correctamente:
 
 ![1](https://github.com/carlillostole/proyectoIV17-18/blob/master/img/despliegue.png?raw=true)
+
+### Servicio web FLASK
+
+Para desplegar el servicio web en Heroku he utilizado Flask y Gunicorn.
+
+Primero lo instalamos con los siguientes comandos:
+
+```
+pip install gunicorn flask
+
+```
+
+```
+pip install Flask
+
+```
+Una vez instalado el microframework Flask y gunicorn, creamos un archivo app.py en el directorio principal del proyecto que se está realizando, con el siguiente contenido:
+
+```
+from flask import Flask
+from datetime import datetime
+import json
+
+app = Flask(__name__)
+
+
+@app.route('/')
+def status():
+    data={"status":"OK"}
+    return json.dumps(data)
+
+if __name__ == '__main__':
+    app.run(debug=True, use_reloader=True)
+```
+
+Esto lo que hace es devolver Status: OK cuando abramos la aplicación web en Heroku, demostrando que el servicio esta arrancado y ejecutándose correctamente, conjuntamente con el worker.
+
+En la siguiente captura se muestra tanto el worker como la aplicación web funcionando en Heroku, con todas las configuraciones realizadas correctamente.
+
+![3]()
+
+![4]()
+
+### Despliegue
+
+Despliegue https://theweatherbot1718.herokuapp.com/
