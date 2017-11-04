@@ -121,9 +121,9 @@ Esto lo que hace es devolver Status: OK cuando abramos la aplicación web en Her
 
 En la siguiente captura se muestra tanto el worker como la aplicación web funcionando en Heroku, con todas las configuraciones realizadas correctamente.
 
-![3]()
+![3](https://github.com/carlillostole/proyectoIV17-18/blob/master/img/herokutotal.png?raw=true)
 
-![4]()
+![4](https://github.com/carlillostole/proyectoIV17-18/blob/master/img/status.png?raw=true)
 
 ### Despliegue
 
