@@ -18,4 +18,4 @@ RUN apt-get install -y python-pip
 RUN pip install --upgrade pip
 
 # Instalacion de las dependencias del proyecto
-RUN cd proyectoIV17-18 && make install
+RUN cd /proyectoIV17-18 && make install
