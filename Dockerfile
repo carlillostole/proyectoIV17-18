@@ -7,6 +7,10 @@ MAINTAINER Carlos Toledano Delgado <carliyostole@gmail.com>
 #Actualizar Repositorio
 RUN apt-get update
 
+#Instalamos git y descargamos el repositorio
+RUN sudo apt-get install -y git
+RUN sudo git clone https://github.com/carlillostole/proyectoIV17-18
+
 #Instalamos python y pip por medio de nuestro Makefile
 RUN apt-get install -y python-dev
 RUN apt-get install -y libpq-dev
