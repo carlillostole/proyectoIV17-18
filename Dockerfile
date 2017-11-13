@@ -1,23 +1,21 @@
-# Sistema operativo
+# Version sistema operativo
 FROM ubuntu:17.10
 
 # Autor
 MAINTAINER Carlos Toledano Delgado <carliyostole@gmail.com>
 
-#Actualizar Sistema Base
-RUN sudo apt-get -y update
+#Actualizar Repositorio
+RUN apt-get update
 
-# Instalacion 
+#Instalamos git y descargamos el repositorio
 RUN sudo apt-get install -y git
 RUN sudo git clone https://github.com/carlillostole/proyectoIV17-18
 
-#Instalar python
-RUN sudo apt-get -y install python-dev
-RUN sudo apt-get install -y python-setuptools
-RUN sudo apt-get install -y build-essential
-RUN sudo apt-get -y install libpq-dev
-RUN sudo easy_install pip
-RUN sudo pip install --upgrade pip
+#Instalamos python y pip por medio de nuestro Makefile
+RUN apt-get install -y python-dev
+RUN apt-get install -y libpq-dev
+RUN apt-get install -y python-pip
+RUN pip install --upgrade pip
 
 # Instalacion de las dependencias del proyecto
-RUN cd proyectoIV17-18/ && make install
+RUN cd proyectoIV17-18 && make install
