@@ -5,7 +5,7 @@ FROM ubuntu:17.10
 MAINTAINER Carlos Toledano Delgado <carliyostole@gmail.com>
 
 #Actualizar Repositorio
-RUN sudo apt-get -y update
+RUN apt-get -y update
 
 #Instalamos python y pip por medio de nuestro Makefile
 RUN apt-get install -y python-dev
@@ -14,8 +14,8 @@ RUN apt-get install -y python-pip
 RUN pip install --upgrade pip
 
 #Instalamos git y descargamos el repositorio
-RUN sudo apt-get install -y git
-RUN sudo git clone https://github.com/carlillostole/proyectoIV17-18
+RUN apt-get install -y git
+RUN git clone https://github.com/carlillostole/proyectoIV17-18
 
 # Instalacion de las dependencias del proyecto
 RUN cd proyectoIV17-18/ && make install
