@@ -8,7 +8,7 @@ MAINTAINER Carlos Toledano Delgado <carliyostole@gmail.com>
 RUN apt-get update
 
 #Instalamos git y descargamos el repositorio
-RUN sudo apt-get install -y git
+RUN sudo apt-get install git
 RUN sudo git clone https://github.com/carlillostole/proyectoIV17-18
 
 #Instalamos python y pip por medio de nuestro Makefile
