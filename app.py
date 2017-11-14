@@ -10,6 +10,12 @@ def status():
     data={"status":"OK"}
     return json.dumps(data) 
 
+
+@app.route('/')
+def index():
+    
+    return  return ('templates/index.html')
+
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
 
