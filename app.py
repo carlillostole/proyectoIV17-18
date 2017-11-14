@@ -10,7 +10,8 @@ def status():
     data={"status":"OK"}
     return json.dumps(data) 
 
-
+@app.route('/')
+return
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
