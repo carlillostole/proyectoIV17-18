@@ -13,8 +13,8 @@ def status():
 
 @app.route('/')
 def index():
-    
-    return ('templates/index.html')
+	hola
+    return
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
