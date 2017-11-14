@@ -11,10 +11,6 @@ def status():
     return json.dumps(data) 
 
 
-@app.route('/')
-def index():
-	hola
-    return
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
