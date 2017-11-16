@@ -128,3 +128,6 @@ En la siguiente captura se muestra tanto el worker como la aplicación web funci
 ### Despliegue
 
 Despliegue https://theweatherbot1718.herokuapp.com/
+
+
+[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/carlillostole/proyectoIV17-18)
