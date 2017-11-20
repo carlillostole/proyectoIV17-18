@@ -139,28 +139,28 @@ Despliegue https://theweatherbot1718.herokuapp.com/status
 
 ### Despliegue en Docker
 
-Para poder desplegar nuestro proyecto en Docker, nos registramos y seguidamente enlazamos con el repositorio de GitHub. Necesitamos añadir a nuestro repositorio el archivo ![Dockerfile](dcoker) para que Docker construya la imagen.
+Para poder desplegar nuestro proyecto en Docker, nos registramos y seguidamente enlazamos con el repositorio de GitHub. Necesitamos añadir a nuestro repositorio el archivo [Dockerfile](https://github.com/carlillostole/proyectoIV17-18/blob/master/Dockerfile) para que Docker construya la imagen.
 
 Una vez creado el archivo, Docker comenzará a construir un contenedor con los comandos que se encuentran en el archivo.
 
 Como resultado obtenemos el contenedor creado y su configuración realizada:
 
-![6](dcoker2)
+![6](https://github.com/carlillostole/proyectoIV17-18/blob/master/img/docker2.png?raw=true)
 
 Dentro de la web se crea un "Automated Build" sobre el repositorio de nuestro proyecto en github, lo cual, cada vez que hacemos un push a nuestro repositorio, se actualizará de forma automática.
 
-![6](dcoker3)
+![6](https://github.com/carlillostole/proyectoIV17-18/blob/master/img/docker3.png?raw=true)
 
 
 Para descargar nuestro contenedor introducimos el siguiente comando:
 
 ```
-sudo docker![6](azure1) build -t proyectoiv17-18 ./
+sudo docker build -t proyectoiv17-18 ./
 
 ```
 El uso de "sudo" puede traer problemas, no es recomendado utilizarlo, podemos seguir el siguiente tutorial proporcionado por el profesor por telegram:
 
-![Tutorial](https://docs.docker.com/engine/installation/linux/linux-postinstall/)
+[Tutorial](https://docs.docker.com/engine/installation/linux/linux-postinstall/)
 
 Una vez descargada la imagen de Docker comprobamos que se encuentra correctamente con el comando:
 
@@ -179,29 +179,29 @@ Primero he canjeado un cupón proporcionado por el profesor para poder desplegar
 
 Una vez canjeado seguimos, creamos una aplicación basada en linux:
 
-![6](azure1)
+![6](https://github.com/carlillostole/proyectoIV17-18/blob/master/img/azure1.png?raw=true)
 
 A continuación introducimos el nombre de la aplicación, la suscripción de Azure, un grupo de recursos, el plan de App Service y por último enlazamos el contenedor Docker con la imagen/etiqueta de mi DockerHub, y le damos a aceptar.
 
-![6](azure2)
+![6](https://github.com/carlillostole/proyectoIV17-18/blob/master/img/azure2.png?raw=true)
 
 Una vez creado tenemos lo siguiente, con un enlace a la aplicación desplegada:
 
-![6](azure3)
+![6](https://github.com/carlillostole/proyectoIV17-18/blob/master/img/azure3.png?raw=true)
 
 Aplicación desplegada:
 
 Página principal:
 
-![6](azure4)
+![6](https://github.com/carlillostole/proyectoIV17-18/blob/master/img/azure4.png?raw=true)
 
 Status:
 
-![6](azure5)
+![6](https://github.com/carlillostole/proyectoIV17-18/blob/master/img/azure5.png?raw=true)
 
 Para que cargue correctamente y no de error, debemos configurar el puerto en el archivo Dockerfile como muestra a continuación:
 
-![6](docker5)
+![6](https://github.com/carlillostole/proyectoIV17-18/blob/master/img/dockerpuerto.png?raw=true)
 
 Por último enlace al despliegue:
 
