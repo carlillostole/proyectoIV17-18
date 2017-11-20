@@ -108,16 +108,24 @@ import json
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/status')
 def status():
     data={"status":"OK"}
     return json.dumps(data)
 
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+
+
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
+
 ```
 
-Esto lo que hace es devolver Status: OK cuando abramos la aplicación web en Heroku, demostrando que el servicio esta arrancado y ejecutándose correctamente, conjuntamente con el worker.
+Esto lo que hace es devolver Status: OK cuando abramos la aplicación web en Heroku con la dirección /status,( https://theweatherbot1718.herokuapp.com/status ), demostrando que el servicio esta arrancado y ejecutándose correctamente, conjuntamente con el worker. Para ver la pagina principal basta con abrir el enlace en /. ( https://theweatherbot1718.herokuapp.com/ )
 
 En la siguiente captura se muestra tanto el worker como la aplicación web funcionando en Heroku, con todas las configuraciones realizadas correctamente.
 
@@ -127,7 +135,74 @@ En la siguiente captura se muestra tanto el worker como la aplicación web funci
 
 ### Despliegue
 
-Despliegue https://theweatherbot1718.herokuapp.com/
+Despliegue https://theweatherbot1718.herokuapp.com/status
+
+### Despliegue en Docker
+
+Para poder desplegar nuestro proyecto en Docker, nos registramos y seguidamente enlazamos con el repositorio de GitHub. Necesitamos añadir a nuestro repositorio el archivo ![Dockerfile](dcoker) para que Docker construya la imagen.
+
+Una vez creado el archivo, Docker comenzará a construir un contenedor con los comandos que se encuentran en el archivo.
+
+Como resultado obtenemos el contenedor creado y su configuración realizada:
+
+![6](dcoker2)
+
+Dentro de la web se crea un "Automated Build" sobre el repositorio de nuestro proyecto en github, lo cual, cada vez que hacemos un push a nuestro repositorio, se actualizará de forma automática.
+
+![6](dcoker3)
 
 
-[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/carlillostole/proyectoIV17-18)
+Para descargar nuestro contenedor introducimos el siguiente comando:
+
+```
+sudo docker![6](azure1) build -t proyectoiv17-18 ./
+
+```
+El uso de "sudo" puede traer problemas, no es recomendado utilizarlo, podemos seguir el siguiente tutorial proporcionado por el profesor por telegram:
+
+![Tutorial](https://docs.docker.com/engine/installation/linux/linux-postinstall/)
+
+Una vez descargada la imagen de Docker comprobamos que se encuentra correctamente con el comando:
+
+```
+docker images
+
+```
+
+Contenedor: https://hub.docker.com/r/carlillostole/proyectoiv17-18/
+
+### Despliegue en Azure
+
+El despliegue en Azure lo he realizado siguiendo estos pasos:
+
+Primero he canjeado un cupón proporcionado por el profesor para poder desplegar el proyecto correctamente, agradecimientos a diegomrtnzg y msabierto.
+
+Una vez canjeado seguimos, creamos una aplicación basada en linux:
+
+![6](azure1)
+
+A continuación introducimos el nombre de la aplicación, la suscripción de Azure, un grupo de recursos, el plan de App Service y por último enlazamos el contenedor Docker con la imagen/etiqueta de mi DockerHub, y le damos a aceptar.
+
+![6](azure2)
+
+Una vez creado tenemos lo siguiente, con un enlace a la aplicación desplegada:
+
+![6](azure3)
+
+Aplicación desplegada:
+
+Página principal:
+
+![6](azure4)
+
+Status:
+
+![6](azure5)
+
+Para que cargue correctamente y no de error, debemos configurar el puerto en el archivo Dockerfile como muestra a continuación:
+
+![6](docker5)
+
+Por último enlace al despliegue:
+
+Despliegue Azure: http://proyectoiv1718.azurewebsites.net/
