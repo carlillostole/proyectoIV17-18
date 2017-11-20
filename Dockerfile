@@ -19,3 +19,7 @@ RUN git clone https://github.com/carlillostole/proyectoIV17-18
 
 # Instalacion de las dependencias del proyecto
 RUN cd proyectoIV17-18/ && make install
+
+EXPOSE 8000
+WORKDIR proyectoIV17-18/
+CMD gunicorn app:app --log-file=- --bind 0.0.0.0:8000
