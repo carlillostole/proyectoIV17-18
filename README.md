@@ -205,4 +205,4 @@ Para que cargue correctamente y no de error, debemos configurar el puerto en el 
 
 Por último enlace al despliegue:
 
-Contenedor:http://proyectoiv1718.azurewebsites.net
+Contenedor http://proyectoiv1718.azurewebsites.net
