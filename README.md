@@ -169,7 +169,7 @@ docker images
 
 ```
 
-Contenedor: https://hub.docker.com/r/carlillostole/proyectoiv17-18/
+Contenedor:https://hub.docker.com/r/carlillostole/proyectoiv17-18/
 
 ### Despliegue en Azure
 
@@ -205,4 +205,4 @@ Para que cargue correctamente y no de error, debemos configurar el puerto en el 
 
 Por último enlace al despliegue:
 
-Despliegue Azure: http://proyectoiv1718.azurewebsites.net/
+Despliegue en Azure: http://proyectoiv1718.azurewebsites.net/
