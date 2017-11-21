@@ -5,16 +5,10 @@ import json
 app = Flask(__name__)
 
 
-@app.route('/status')
+@app.route('/')
 def status():
     data={"status":"OK"}
     return json.dumps(data) 
-
-
-@app.route('/')
-def index():
-    return render_template('index.html')
-
 
 
 if __name__ == '__main__':
