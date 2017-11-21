@@ -135,7 +135,7 @@ En la siguiente captura se muestra tanto el worker como la aplicación web funci
 
 ### Despliegue
 
-Despliegue https://theweatherbot1718.herokuapp.com/status
+Despliegue https://theweatherbot1718.herokuapp.com/
 
 ### Despliegue en Docker
 
@@ -205,4 +205,4 @@ Para que cargue correctamente y no de error, debemos configurar el puerto en el 
 
 Por último enlace al despliegue:
 
-Contenedor: http://proyectoiv1718.azurewebsites.net/status
+Contenedor:http://proyectoiv1718.azurewebsites.net
