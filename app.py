@@ -5,11 +5,9 @@ import json
 app = Flask(__name__)
 
 
-@app.route('/')
-def status():
-    data={"status":"OK"}
-    return json.dumps(data) 
-
+@app.route("/")
+def rutaStatus():
+    return jsonify(status='OK')
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
