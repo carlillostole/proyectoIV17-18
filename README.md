@@ -60,6 +60,7 @@ En primer lugar nos descargamos la linea de comandos de Heroku utilizando la ord
 wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
 ```
+
 Para autentificarnos en Heroku utilizamos `heroku login` y nos pedirá que introduzcamos **Email** y **Contraseña**
 
 ### Implementar aplicación
