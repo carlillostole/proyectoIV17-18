@@ -206,3 +206,26 @@ Para que cargue correctamente y no de error, debemos configurar el puerto en el 
 Por último enlace al despliegue:
 
 Contenedor: https://proyectoiv1718.azurewebsites.net
+
+### Despliegue en Zeit
+
+De forma opcional he decidido desplegar mi proyecto también en Zeit.
+
+Para instalarlo hay que introducir el comando:
+```
+npm install -g now
+```
+
+La primera vez que inicie now, le pedirá su dirección de correo electrónico para identificarlo. Simplemente haga clic en el correo electrónico que ha recibido, y se iniciará sesión automáticamente.
+```
+now login
+```
+
+Una vez logueado, simplemente basta con abrir un terminal en el directorio que está la aplicación que queremos desplegar e introducir el comando now y automáticamente se desplegara y se creará la imagen.
+
+Pero en este caso como es un proyecto que se esta desarrollando en GitHub, introducimos el siguiente comando el cuál despliega el repositorio indicado de GitHub:
+```
+now carlillostole/proyectoIV17-18
+```
+
+Despliegue en Zeit https://carlillostole-proyectoiv17-18-kuaehaxept.now.sh/
