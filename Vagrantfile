@@ -23,7 +23,6 @@ Vagrant.configure('2') do |config|
     azure.subscription_id = '98df0dfe-7115-48e6-875e-98527affc7d7'
   end
 
-
   # Provisionar con ansible
   config.vm.provision "ansible" do |ansible|
     ansible.sudo = true
