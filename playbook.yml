@@ -1,0 +1,32 @@
+- hosts: all
+  sudo: yes
+  remote_user: vagrant
+  vars_files:
+    - vars.yml
+  tasks:
+  - name: Actualizar
+    command: sudo apt-get update
+  - name: Instalar setuptools python
+    apt: name=python-setuptools state=present
+  - name: Instalar python-dev
+    apt: name=python-dev state=present
+  - name: Instalar libpq-dev python
+    apt: name=libpq-dev state=present
+  - name: Instalar build-essential python
+    apt: name=build-essential state=present
+  - name: Instalar python-psycopg2
+    apt: name=python-psycopg2 state=present
+  - name: Instalar git
+    apt: name=git state=present
+  - name: Instalar pip
+    apt: name=python-pip state=present
+  - name: Instalamos la API del bot
+    command: sudo pip install python-telegram-bot
+  - name: Descargar repositorio carlillostole
+    shell: rm -rf proyectoIV17-18 && git clone https://github.com/carlillostole/proyectoIV17-18 
+  - name: Instalar supervisor
+    apt: name=supervisor state=present	
+  - name: Configurar programa para el supervisor
+    template: src=weather.conf dest=/etc/supervisor/conf.d/weather.conf
+  - name: Ejecutar supervisor
+    service: name=supervisor state=started

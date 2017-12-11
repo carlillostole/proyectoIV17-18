@@ -1,0 +1,13 @@
+---
+
+# Variables para el despliegue
+project_name: proyectoIV1718
+project_repo: https://github.com/carlillostole/proyectoIV17-18
+proyect_path: appiv1718
+
+# Dependencias del sistema
+system_packages:
+  - build-essential
+  - npm
+  - nodejs-legacy
+  - git
