@@ -11,7 +11,6 @@ Mostrar sin necesidad de salir de Telegram y en cuestión de segundos, el tiempo
 
 Uso de un bot de Telegram para obtener información meteorológica de una ciudad determinada introducida. El bot va a estar alojado junto a una base de datos en un servidor en la nube ya sea en **Azure**, **Cloud9**, **Amazon web services**, etc.
 
-
 ## Más información
 
 -	El usuario deberá tener Telegram para que se le envíe el pronóstico.
@@ -229,3 +228,23 @@ now carlillostole/proyectoIV17-18
 ```
 
 Despliegue en Zeit https://carlillostole-proyectoiv17-18-kuaehaxept.now.sh/
+
+### Despliegue en un IaaS
+
+La aplicación con la que he venido trabajando se ha desplegado en Azure. He empleado Vagrant como herramienta para la creación de la máquina virtual en la cual se alojará nuestra aplicación, en mi caso el bot de Telegram. También contendrá Ansible para el aprovisionamiento y Fabric para instalar y poner el bot en ejecución.
+
+Todos los ficheros nombrados anteriormente son los siguientes: [Vagranfile](https://github.com/carlillostole/proyectoIV17-18/blob/master/Vagrantfile) para crear la máquina virtual, [Playbook de Ansible](https://github.com/carlillostole/proyectoIV17-18/blob/master/provision/playbook.yml) para el aprovisionamiento, el fichero [Fabfile](https://github.com/carlillostole/proyectoIV17-18/blob/master/despliegue/fabfile.py) para acceder remotamente y, por último, el fichero [weather.conf](https://github.com/carlillostole/proyectoIV17-18/blob/master/weather.conf) para lanzar el bot con supervisor y se mantenga en uso aunque se cierre la terminal. Si no se quiere usar supervisor, se puede utilizar nohup, actúa de la misma manera.
+
+Para crear la máquina virtual usaremos la siguiente orden:
+
+```sudo vagrant up --provider=azure
+```
+Una vez está instalada y lanzada la máquina virtual, ejecutaremos el bot usando Fabric con la orden:
+
+```
+fab -H nombremaquina@nombreDNSmv funcion
+```
+
+Con esto nuestro bot ya estaría funcionando perfectamente y listo para poder hablarle.
+
+Ampliando documentación proyecto...
