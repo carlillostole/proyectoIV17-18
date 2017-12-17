@@ -237,7 +237,8 @@ Todos los ficheros nombrados anteriormente son los siguientes: [Vagranfile](http
 
 Para crear la máquina virtual usaremos la siguiente orden:
 
-```sudo vagrant up --provider=azure
+```
+sudo vagrant up --provider=azure
 ```
 Una vez está instalada y lanzada la máquina virtual, ejecutaremos el bot usando Fabric con la orden:
 
