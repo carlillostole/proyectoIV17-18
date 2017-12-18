@@ -3,6 +3,14 @@
 
 [![Build Status](https://travis-ci.org/carlillostole/proyectoIV17-18.svg?branch=master)](https://travis-ci.org/carlillostole/proyectoIV17-18)
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/apps/theweatherbot1718)
+
+[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
+
+![Docker: OK](https://dockerbuildbadges.quelltext.eu/status.svg?organization=niccokunzmann&repository=dockerhub-build-status-image)
+
+[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
+
 ## Objetivo
 
 Mostrar sin necesidad de salir de Telegram y en cuestión de segundos, el tiempo actual de una ciudad.
@@ -248,5 +256,6 @@ fab -H nombremaquina@nombreDNSmv funcion
 
 Con esto nuestro bot ya estaría funcionando perfectamente y listo para poder hablarle.
 
+Despliegue final: maquinaiv.westeurope.cloudapp.azure.com
 
 Ampliando documentación proyecto...
