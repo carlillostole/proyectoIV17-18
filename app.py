@@ -10,10 +10,18 @@ app = Flask(__name__)
 }
 
 
-
 @app.route("/")
 def principal():
     return jsonify(status='OK')
+
+@app.route("/status")
+def docker():
+    return jsonify(status='OK')
+
+@app.route("/index")
+def index():
+    return render_template("index.html")
+
 
 if __name__ == "__main__":
         app.run(debug = True, use_reloader = True)
