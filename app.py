@@ -1,4 +1,4 @@
-from flask import Flask,request, jsonify
+from flask import Flask,request, jsonify, render_template
 import os
 import json
 
@@ -21,7 +21,6 @@ def docker():
 @app.route("/index")
 def index():
     return render_template("index.html")
-
 
 if __name__ == "__main__":
         app.run(debug = True, use_reloader = True)
