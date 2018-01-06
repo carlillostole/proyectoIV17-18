@@ -257,5 +257,3 @@ fab -H nombremaquina@nombreDNSmv funcion
 Con esto nuestro bot ya estaría funcionando perfectamente y listo para poder hablarle.
 
 Despliegue final: maquinaiv.westeurope.cloudapp.azure.com
-
-Ampliando documentación proyecto...
